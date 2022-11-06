@@ -1,10 +1,10 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  base:"first-meet",
-  integrations: [solidJs()]
+  base: process.env.NODE_ENV === "production" ? "first-meet" : "",
+  integrations: [solidJs()],
 });
