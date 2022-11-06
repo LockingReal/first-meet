@@ -4,7 +4,10 @@ import { defineConfig } from "astro/config";
 import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
+import tailwind from "@astrojs/tailwind";
+
+// https://astro.build/config
 export default defineConfig({
   base: process.env.NODE_ENV === "production" ? "first-meet" : "",
-  integrations: [solidJs()],
+  integrations: [solidJs(), tailwind()]
 });
